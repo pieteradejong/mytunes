@@ -2,6 +2,7 @@
 var SongQueue = Songs.extend({
 
   initialize: function(){
+    // console.log('initialize SongQueue');
     var collection = this;
     this.on('add', function(song) {
       if(this.length === 1) {
@@ -26,6 +27,30 @@ var SongQueue = Songs.extend({
     if(this.length > 0) {
       this.at(0).play();
     }
+  },
+
+  render: function() {
+    console.log('rendering SongQueue');
   }
 
 });
+
+/*
+
+  events: {
+    'click #enqueue': "enqueue"
+  },
+
+    this.on('click', 'a', function(event) {
+      event.preventDefault();
+      console.log(this);
+    });
+
+  enqueue: function(song) {
+    this.model.add(song);
+    console.log(song);
+    console.log(this.model);
+  },
+
+
+*/
