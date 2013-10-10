@@ -8,6 +8,11 @@ var App = Backbone.Model.extend({
     params.library.on('play', function(song){
       this.set('currentSong', song);
     }, this);
-  }
+  },
+
+  // enQueue: songQueue.add(song)
+  // play: function() {
+
+  // }
 
 });
